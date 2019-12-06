@@ -1,4 +1,4 @@
-const databaze = [
+[
 	{
 		nazevPsa: "Bígl",
 		kategorie: "Honiči a barváři",
