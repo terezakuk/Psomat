@@ -11,7 +11,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "velmi dobrý",
 		"zajimavost": "Název beagle je pravděpodobně odvozen od staroanglického slova begle, nebo od keltského výrazu beag či od starofrancouzského slova beigh. Všechny tři výrazy odpovídají pojmu malý.",
-		"vhodnyProZacatecniky":"false"
+		"vhodnyProZacatecniky":false,
+		"doBytu": ""
 
 	},
 
@@ -27,7 +28,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "komplikovaný",
 		"zajimavost": "Toto plemeno se jen velmi vzácně objevuje jinde, než ve Francii a Anglii, v ČR se nevyskytují žádní jedinci tohoto plemene",
-		"vhodnyProZacatecniky": "false"
+		"vhodnyProZacatecniky": false,
+		"doBytu": ""
 	},
 
 	{
@@ -42,7 +44,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Byl vyšlechtěn ve Velké Británii v 15.stol. pro chov lišek.",
-		"vhodnyProZacatecniky": "false"
+		"vhodnyProZacatecniky": false,
+		"doBytu": ""
 	},
 
 	{
@@ -57,7 +60,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Jako plemeno vznikl afghánský chrt již v prvním tisíciletí našeho letopočtu, ale zmínky o něm prý sahají dokonce až do dob Sumerské říše. ",
-		"vhodnyProZacatecniky": "false"
+		"vhodnyProZacatecniky": false,
+		"doBytu": ""
 	},
 	{
 		"nazevPsa": "Greyhound",
@@ -71,7 +75,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Je nejrychlejším psem na světě.",
-		"vhodnyProZacatecniky":"false"
+		"vhodnyProZacatecniky":false,
+		"doBytu": ""
 
 	},
 
@@ -87,7 +92,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "velmi dobrý",
 		"zajimavost": "Je maskotem irské gardy.",
-		"vhodnyProZacatecniky":"true"
+		"vhodnyProZacatecniky":true,
+		"doBytu": ""
 
 	},
 
@@ -103,7 +109,9 @@
 		"foto": "",
 		"vztahKJinymZviratum": "velmi dobrý",
 		"zajimavost": "Jezevčíci mají vynikající sluch.",
-		"vhodnyProZacatecniky":"false"
+		"vhodnyProZacatecniky":false,
+		"doBytu": ""
+
 
 	},
 
@@ -119,7 +127,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "velmi dobrý",
 		"zajimavost": "Jezevčíci mají vynikající sluch.",
-		"vhodnyProZacatecniky":"false"
+		"vhodnyProZacatecniky":false,
+		"doBytu": ""
 	},
 
 { 
@@ -134,7 +143,8 @@
 		"foto": "",
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Jezevčíci mají vynikající sluch.",
-		"vhodnyProZacatecniky":"false"
+		"vhodnyProZacatecniky":false,
+		"doBytu": ""
 	},
 
 { 
@@ -149,7 +159,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "dobrý",
 	"zajimavost": "Jezevčíci mají vynikající sluch.",
-	"vhodnyProZacatecniky":"false"
+	"vhodnyProZacatecniky":false,
+	"doBytu": ""
 }, 
 	{ 
 	"nazevPsa": "Bernský salašnický pes",
@@ -163,8 +174,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "špatný", 
 	"zajimavost": "Nejlépe mu je poblíž pána, například na gauči.",
-	"vhodnyProZacatecniky":"true",
-	"doBytu": "false"
+	"vhodnyProZacatecniky":true,
+	"doBytu": false
 },
 	{
 	"nazevPsa": "Sheltie",
@@ -178,8 +189,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "dobrý",
 	"zajimavost": "Potřebuje dostatek vybití energie po celý její život. Má velmi dobrou maměť.",
-	"vhodnyProZacatecniky":"true",
-	"doBytu": "true"
+	"vhodnyProZacatecniky":true,
+	"doBytu": true
 	},
 	{
 	"nazevPsa": "Kooikerhondje",
@@ -193,8 +204,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "dobrý",
 	"zajimavost": "Je skvělý aportér.",
-	"vhodnyProZacatecniky":"false",
-	"doBytu": "true"
+	"vhodnyProZacatecniky":false,
+	"doBytu": true
 	},
 	{
 	"nazevPsa": "Kavalír King Charles španěl",
@@ -208,8 +219,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "dobrý",
 	"zajimavost": "Je to nesmírně citlivé zvíře, které se musí vychovávat pozitivně.",
-	"vhodnyProZacatecniky":"true",
-	"doBytu": "true"
+	"vhodnyProZacatecniky": true,
+	"doBytu": true
 	},
 	{
 	"nazevPsa": "Portugalský podengo střední",
@@ -223,8 +234,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "dobrý",
 	"zajimavost": "V dřívějších dobách byl používán k lovu a to především králíků",
-	"vhodnyProZacatecniky":"false",
-	"doBytu": "false"
+	"vhodnyProZacatecniky":false,
+	"doBytu": false
 	},
 	{
 	"nazevPsa": "Jack Russell teriér",
@@ -238,8 +249,8 @@
 	"foto": "",
 	"vztahKJinymZviratum": "špatný",
 	"zajimavost": "Jack Russell teriéři jsou známí tím, že s oblibou hrabou v záhonech, ale i mimo ně. Když má málo tréninkových podnětů a cítí se znuděný, má silné destruktivní sklony.",
-	"vhodnyProZacatecniky":"false",
-	"doBytu": "false"
+	"vhodnyProZacatecniky": false,
+	"doBytu": false
 	}
 
 	]
