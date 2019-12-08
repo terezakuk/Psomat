@@ -3,6 +3,18 @@
     <h1>Tady budeme psat nas vyhledavac</h1>
 
     <div class="pokus">
+      <h3>Vyhledání psa dle vhodnosti zkušeností majitele</h3>
+      <input type="checkbox" id="zacatecnik" value="true" v-model="vhodnyProZacatecniky" />
+      <label for="zacatecnik">Vhodný pro začátečníky</label>
+      <input type="checkbox" id="pokrocily" value="false" v-model="vhodnyProZacatecniky" />
+      <label for="pokrocily">Vhodný pro pokročilé</label>
+
+      <h3>Vyhledání psa dle vhodnosti do bytu/zahrady</h3>
+      <input type="checkbox" id="byt" value="true" v-model="doBytu" />
+      <label for="byt">Vhodný do bytu</label>
+      <input type="checkbox" id="zahrada" value="false" v-model="doBytu" />
+      <label for="zahrada">Vhodný na zahradu</label>
+
       <h3>Vztah psa k ostatním zvířatům</h3>
       <input type="checkbox" id="kladny" value="kladný" v-model="vztahKJinymZviratum" />
       <label for="kladny">Kladný</label>
@@ -40,7 +52,9 @@ export default {
     return {
       vztahKJinymZviratum: [],
       hmotnost: [],
-      vyska: []
+      vyska: [],
+      doBytu: [],
+      vhodnyProZacatecniky: []
     };
   },
 
@@ -50,14 +64,18 @@ export default {
       console.log(this.vztahKJinymZviratum);
       console.log(this.hmotnost);
       console.log(this.vyska);
+      console.log(this.doBytu);
+      console.log(this.vhodnyProZacatecniky);
       let filter = {
         vztahKJinymZviratum: this.vztahKJinymZviratum.map(x => x),
         hmotnost: this.hmotnost.map(mapujOdDo),
-        vyska: this.vyska.map(mapujOdDo)
+        vyska: this.vyska.map(mapujOdDo),
+        doBytu: mapujBoolean(this.doBytu),
+        vhodnyProZacatecniky: mapujBoolean(this.vhodnyProZacatecniky)
       };
 
       console.log(filter);
-      this.$emit("filtruj",filter)
+      this.$emit("filtruj", filter);
     }
   }
 };
@@ -68,6 +86,18 @@ function mapujOdDo(odDoString) {
     od: parseInt(promennaOdDo[0]),
     do: parseInt(promennaOdDo[1])
   };
+}
+
+function mapujBoolean(bool) {
+  if (bool.length === 0 || bool.length === 2) {
+    return null;
+  } else {
+    if (bool[0] === "true") {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 </script>
 
