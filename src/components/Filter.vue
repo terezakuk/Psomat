@@ -40,6 +40,36 @@
 
       <input type="checkbox" id="velky" value="40-150" v-model="vyska" />
       <label for="velky">Pes nad 40 centimetrů</label>
+
+      <h3>Vyhledání podle plemene</h3>
+      <input type="checkbox" id="honici" value="Honiči a barváři" v-model="kategorie" />
+      <label for="honici">Honiči a barváři</label>
+      <input type="checkbox" id="chrti" value="Chrti" v-model="kategorie" />
+      <label for="chrti">Chrti</label>
+      <input type="checkbox" id="jezevcici" value="Jezevčíci" v-model="kategorie" />
+      <label for="jezevcici">Jezevčíci</label>
+      <input
+        type="checkbox"
+        id="pincove"
+        value="Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi"
+        v-model="kategorie"
+      />
+      <label for="pincove">Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi</label>
+      <input
+        type="checkbox"
+        id="ovcaci"
+        value="Plemena ovčácká, pastevecká a honácká"
+        v-model="kategorie"
+      />
+      <label for="ovcaci">Plemena ovčácká, pastevecká a honácká</label>
+      <input type="checkbox" id="slidici" value="Slídiči, retrívři a vodní psi" v-model="kategorie" />
+      <label for="slidici">Slídiči, retrívři a vodní psi</label>
+      <input type="checkbox" id="spolecenska" value="Společenská plemena" v-model="kategorie" />
+      <label for="spolecenska">Společenská plemena</label>
+      <input type="checkbox" id="spicove" value="Špicové a plemena primitivní" v-model="kategorie" />
+      <label for="spicove">Špicové a plemena primitivní</label>
+      <input type="checkbox" id="terieri" value="Teriéři" v-model="kategorie" />
+      <label for="terieri">Teriéři</label>
     </div>
 
     <button v-on:click="vyhledat()">Vyhledat</button>
@@ -54,7 +84,8 @@ export default {
       hmotnost: [],
       vyska: [],
       doBytu: [],
-      vhodnyProZacatecniky: []
+      vhodnyProZacatecniky: [],
+      kategorie: []
     };
   },
 
@@ -66,12 +97,14 @@ export default {
       console.log(this.vyska);
       console.log(this.doBytu);
       console.log(this.vhodnyProZacatecniky);
+      console.log(this.kategorie);
       let filter = {
         vztahKJinymZviratum: this.vztahKJinymZviratum.map(x => x),
         hmotnost: this.hmotnost.map(mapujOdDo),
         vyska: this.vyska.map(mapujOdDo),
         doBytu: mapujBoolean(this.doBytu),
-        vhodnyProZacatecniky: mapujBoolean(this.vhodnyProZacatecniky)
+        vhodnyProZacatecniky: mapujBoolean(this.vhodnyProZacatecniky),
+        vztahKJinymZviratum: this.kategorie.map(x => x)
       };
 
       console.log(filter);
