@@ -1,6 +1,8 @@
 <template>
   <div><h1>Obrazovka vyhledavani</h1> 
-  <filter-psu />
+  <filter-psu 
+  v-on:filtruj="filtruj($event)"
+  />
   </div>
 </template>
 
@@ -9,6 +11,12 @@ import Filter from '@/components/Filter.vue'
 export default {
     components: {
         'filter-psu': Filter
+    },
+
+    methods: {
+      filtruj(filter){
+console.log("filtruj", filter);
+      }
     }
         
 }
