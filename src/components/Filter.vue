@@ -104,7 +104,7 @@ export default {
         vyska: this.vyska.map(mapujOdDo),
         doBytu: mapujBoolean(this.doBytu),
         vhodnyProZacatecniky: mapujBoolean(this.vhodnyProZacatecniky),
-        vztahKJinymZviratum: this.kategorie.map(x => x)
+        kategorie: this.kategorie.map(x => x)
       };
 
       console.log(filter);
