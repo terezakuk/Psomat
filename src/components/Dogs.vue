@@ -2,8 +2,8 @@
 <div>
   <p v-if="loading">Načítám data...</p>
   <ul v-if="!loading">
-    <li v-for="(pes, index) in psi" v-bind:key="index">
-      <router-link v-bind:to="`/dog/${ index }`">{{ pes.nazevPsa }}</router-link>
+    <li v-for="pes in psi" v-bind:key="pes.id">
+      <router-link v-bind:to="`/dog/${pes.id}`">{{ pes.nazevPsa }}</router-link>
     </li>
   </ul>
 </div>
