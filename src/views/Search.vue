@@ -1,27 +1,28 @@
 <template>
-  <div><h1>Obrazovka vyhledavani</h1> 
-  <filter-psu 
-  v-on:filtruj="filtruj($event)"
-  />
+  <div>
+    <h1>Obrazovka vyhledavani</h1>
+    <filter-psu v-on:filtruj="filtruj($event)" />
+    <dogs />
   </div>
 </template>
 
 <script>
-import Filter from '@/components/Filter.vue'
+import Filter from "@/components/Filter.vue";
+import Dogs from "@/components/Dogs.vue";
 export default {
-    components: {
-        'filter-psu': Filter
-    },
+  
+  components: {
+    "filter-psu": Filter,
+          dogs: Dogs
+  },
 
-    methods: {
-      filtruj(filter){
-console.log("filtruj", filter);
-      }
+  methods: {
+    filtruj(filter) {
+      console.log("filtruj", filter);
     }
-        
-}
+  }
+};
 </script>
 
 <style>
-
 </style>
