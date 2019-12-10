@@ -25,12 +25,19 @@ export default {
       filtrovaniPsi: []
     };
   },
+
+  watch:{
+    filter: function(novyFilter, staryFilter){
+     this.filtrovaniPsi = filtrujPsy(this.psi,novyFilter);
+    }
+
+  },
   mounted() {
     fetch("/api/dogs.json")
       .then(response => response.json())
       .then(data => {
         this.psi = data;
-        this.filtrovaniPsi = filtrujPsy(data, this.filter);
+        this.filtrovaniPsi = filtrujPsy(this.psi, this.filter);
         this.loading = false;
         console.log("loading skoncil", this.psi.length);
         console.log("filter_v_dogs", this.filter);
@@ -43,6 +50,7 @@ export default {
 };
 
 function filtrujPsy(psi, filter) {
+  console.log("filtruj psy", filter);
   if (bezFiltru(filter)) {
     //když žádný filtr není vybrán, tak vrátí všechny psi
     return psi;
