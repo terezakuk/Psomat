@@ -23,5 +23,20 @@
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 100vh; 
+  font-family: 'Lobster', cursive;
+  margin-right: 100px;
+  margin-left: 100px;
+  color: pink;
+  text-shadow: 1px 3px gray;
 }
+
+.popis {
+  font-family: 'Lobster', cursive;
+  margin-right: 100px;
+  margin-left: 100px;
+  text-align: center;
+  color: pink;
+  text-shadow: 1px 3px gray;
+}
+
 </style>
