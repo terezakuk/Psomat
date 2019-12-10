@@ -13,7 +13,7 @@
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Název beagle je pravděpodobně odvozen od staroanglického slova begle, nebo od keltského výrazu beag či od starofrancouzského slova beigh. Všechny tři výrazy odpovídají pojmu malý.",
 		"vhodnyProZacatecniky": false,
-		"doBytu": ""
+		"doBytu": false
 	},
 	{
 		"id": 2,
@@ -26,10 +26,10 @@
 		"barva": "plavá, zlaté i cihlové barvy",
 		"povaha": "aktivní, houževnatá, vytrvalá, vyrovnaná",
 		"foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/PBBB.JPG",
-		"vztahKJinymZviratum": "specifický",
+		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Toto plemeno se jen velmi vzácně objevuje jinde, než ve Francii a Anglii, v ČR se nevyskytují žádní jedinci tohoto plemene",
 		"vhodnyProZacatecniky": false,
-		"doBytu": ""
+		"doBytu": true
 	},
 	{
 		"id": 3,
@@ -45,7 +45,7 @@
 		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Byl vyšlechtěn ve Velké Británii v 15.stol. pro chov lišek.",
 		"vhodnyProZacatecniky": false,
-		"doBytu": ""
+		"doBytu": false
 	},
 	{
 		"id": 4,
@@ -61,7 +61,7 @@
 		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Jako plemeno vznikl afghánský chrt již v prvním tisíciletí našeho letopočtu, ale zmínky o něm prý sahají dokonce až do dob Sumerské říše. ",
 		"vhodnyProZacatecniky": false,
-		"doBytu": null
+		"doBytu": true
 	},
 	{
 		"id": 5,
@@ -77,7 +77,7 @@
 		"vztahKJinymZviratum": "špatný",
 		"zajimavost": "Je nejrychlejším psem na světě.",
 		"vhodnyProZacatecniky": false,
-		"doBytu": null
+		"doBytu": true
 	},
 	{
 		"id": 6,
@@ -93,7 +93,7 @@
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Je maskotem irské gardy.",
 		"vhodnyProZacatecniky": true,
-		"doBytu": ""
+		"doBytu": false
 	},
 	{
 		"id": 7,
@@ -109,7 +109,7 @@
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Jezevčíci mají vynikající sluch.",
 		"vhodnyProZacatecniky": false,
-		"doBytu": ""
+		"doBytu": false
 	},
 	{
 		"id": 8,
@@ -125,7 +125,7 @@
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Jezevčíci mají vynikající sluch.",
 		"vhodnyProZacatecniky": false,
-		"doBytu": ""
+		"doBytu": true
 	},
 	{
 		"id": 9,
@@ -141,7 +141,7 @@
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Jezevčíci mají vynikající sluch.",
 		"vhodnyProZacatecniky": false,
-		"doBytu": ""
+		"doBytu": false
 	},
 	
 	{
@@ -149,14 +149,14 @@
 		"nazevPsa": "Bernský salašnický pes",
 		"kategorie": "Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi",
 		"zemePuvodu": "Švýcarsko",
-		"hmotnost": "32 - 50",
-		"vyska": "58 - 70",
+		"hmotnost": "32-50",
+		"vyska": "58-70",
 		"vek": "9",
 		"barva": "černá, hnědočervené pálení a bílá",
-		"povaha": "",
+		"povaha": "Přátelská povaha, poslušný. Klidný a vytrvalý, inteligentní a hravý.",
 		"foto": "https://images.dog.ceo/breeds/mountain-bernese/n02107683_1076.jpg",
-		"vztahKJinymZviratum": "špatný",
-		"zajimavost": "Nejlépe mu je poblíž pána, například na gauči.",
+		"vztahKJinymZviratum": "specifický",
+		"zajimavost": "Nejlépe mu je poblíž pána, například na gauči. Je to skvělý pes pro canisterapii a věrný kamarád.",
 		"vhodnyProZacatecniky": true,
 		"doBytu": false
 	},
@@ -169,7 +169,7 @@
 		"vyska": "37",
 		"vek": "12-14",
 		"barva": "zlatá, tricolor, modře mramorovaná, bicolor",
-		"povaha": "",
+		"povaha": "Inteligentní a bystrý pes. Ráda se učí. Živá a sportovně založená povaha. Poslušná. K dětem perfektní.",
 		"foto": "https://images.dog.ceo/breeds/sheepdog-shetland/n02105855_10636.jpg",
 		"vztahKJinymZviratum": "dobrý",
 		"zajimavost": "Potřebuje dostatek vybití energie po celý její život. Má velmi dobrou maměť.",
@@ -197,7 +197,7 @@
 		"nazevPsa": "Kavalír King Charles španěl",
 		"kategorie": "Společenská plemena",
 		"zemePuvodu": "Velká Británie",
-		"hmotnost": "5,5-8,5",
+		"hmotnost": "5-8",
 		"vyska": "30-33",
 		"vek": "10-14",
 		"barva": "černá s pálením, bílá se sytě kaštanovými znaky, kaštanová a tříbarevná",
