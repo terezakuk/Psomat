@@ -11,6 +11,12 @@
 
 <script>
 export default {
+  props: {
+    filter: {
+      type: Object,
+      required: true
+    }
+  },
   data: function() {
     return {
       loading: true,
@@ -24,7 +30,7 @@ export default {
         this.psi = data;
         this.loading = false;
         console.log("loading skoncil", this.psi.length)
-
+        console.log("filter_v_dogs", this.filter)
       })
       .catch(error => {
         console.log(error);
