@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Tady budeme psat nas vyhledavac</h1>
+    <h1></h1>
 
     <div class="pokus">
       <h3>Vyhledání psa dle vhodnosti zkušeností majitele</h3>
@@ -91,13 +91,6 @@ export default {
 
   methods: {
     vyhledat() {
-      console.log("vyhledat");
-      console.log(this.vztahKJinymZviratum);
-      console.log(this.hmotnost);
-      console.log(this.vyska);
-      console.log(this.doBytu);
-      console.log(this.vhodnyProZacatecniky);
-      console.log(this.kategorie);
       let filter = {
         vztahKJinymZviratum: this.vztahKJinymZviratum.map(x => x),
         hmotnost: this.hmotnost.map(mapujOdDo),
