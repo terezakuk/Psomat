@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="detail">
     <p v-if="loading">Nacitam data</p>
+
     <div v-if="!loading">
       <h3>Pes č. {{ id }}</h3>
       <p>Rasa: {{ dog.nazevPsa}}</p>
@@ -15,7 +16,8 @@
       <p>Vhodný pro začátečníky: {{ dog.vhodnyProZacatecniky}}</p>
       <p>Vhodný do bytu: {{ dog.doBytu }}</p>
       <p>Zajímavost: {{ dog.zajimavost}}</p>
-      <p> {{ dog.foto}} </p>        
+      <img class="fotka" v-bind:src="dog.foto"> 
+         
     </div>
   </div>
 </template>
@@ -51,4 +53,16 @@ export default {
 </script>
 
 <style>
+.fotka {
+  max-width: 100%;
+}
+
+.detail {
+margin-left: 200px;
+margin-right: 200px;
+padding: 10px;
+background-color: lightgreen;
+border: 1px solid gray;
+}
+
 </style>
