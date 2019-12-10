@@ -16,8 +16,8 @@
       <label for="zahrada">Vhodný na zahradu</label>
 
       <h3>Vztah psa k ostatním zvířatům</h3>
-      <input type="checkbox" id="kladny" value="kladný" v-model="vztahKJinymZviratum" />
-      <label for="kladny">Kladný</label>
+      <input type="checkbox" id="dobry" value="dobrý" v-model="vztahKJinymZviratum" />
+      <label for="dobry">Dobrý</label>
 
       <input type="checkbox" id="spatny" value="špatný" v-model="vztahKJinymZviratum" />
       <label for="spatny">Špatný</label>

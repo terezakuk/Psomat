@@ -27,7 +27,7 @@ export default {
     filtruj(filter) {
       console.log("filtruj_v_search", filter);
       this.filter = filter;
-      this.vyhledej = true;
+      this.vyhledej = true; 
     }
 
   }
