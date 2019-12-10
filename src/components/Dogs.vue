@@ -7,6 +7,7 @@
         <router-link v-bind:to="`/dog/${pes.id}`">{{ pes.nazevPsa }}</router-link>
       </li>
     </ul>
+    <p v-if="filtrovaniPsi.length === 0">Žádný pejsek nesplňuje kritéria zadaného filtru.</p>
   </div>
 </template>
 
@@ -95,23 +96,30 @@ function splnujePesFiltry(hafan, filter) {
       splnuje = false;
     }
   }
-/*   if (pouzitArrayFilter(filter.vztahKJinymZviratum)) {
+  if (pouzitArrayFilter(filter.vztahKJinymZviratum)) {
+    let vztahSplnuje = false;
     filter.vztahKJinymZviratum.forEach(vztah => {
-      if (vztah != hafan.vztahKJinymZviratum) {
-        splnuje = false;
+      if (vztah == hafan.vztahKJinymZviratum) {
+        vztahSplnuje = true;
       }
     });
-  } */
+    if (!vztahSplnuje) {
+      splnuje = false;
+    }
+  }
+  if (pouzitArrayFilter(filter.kategorie)) {
+    let kategorieSplnuje = false;
+    filter.kategorie.forEach(kat => {
+      if (kat == hafan.kategorie) {
+        kategorieSplnuje = true;
+      }
+    });
+    if (!kategorieSplnuje) {
+      splnuje = false;
+    }
+  }
 
   return splnuje;
-  /* if (
-    filter.doBytu === hafan.doBytu &&
-         filter.hmotnost.length === 0 &&
-    filter.kategorie.length === 0 && 
-    filter.vhodnyProZacatecniky === hafan.vhodnyProZacatecniky  && 
-      filter.vyska.length === 0 &&
-    filter.vztahKJinymZviratum.length === 0 
-  ) {    return true;  } else {    return false;  } */
 }
 
 function pouzitBooleanFilter(boolFilter) {
@@ -123,7 +131,7 @@ function pouzitBooleanFilter(boolFilter) {
 }
 
 function pouzitArrayFilter(arrayFilter) {
-  if (arrayFilter.Length != 0) {
+  if (arrayFilter.length != 0) {
     return true;
   } else {
     return false;
@@ -132,4 +140,5 @@ function pouzitArrayFilter(arrayFilter) {
 </script>
 
 <style>
+
 </style>
