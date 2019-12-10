@@ -56,16 +56,7 @@ function filtrujPsy(psi, filter) {
     //když žádný filtr není vybrán, tak vrátí všechny psi
     return psi;
   } else {
-    for (let index = psi.length - 1; index >= 0; index--) {
-      //zde je hlavní filtr
-      if (!splnujePesFiltry(psi[index], filter)) {
-        console.log("odeberu_psa", psi[index].nazevPsa);
-        psi.splice(index, 1);
-      } else {
-        console.log("nechávám_psa", psi[index].nazevPsa);
-      }
-    }
-    return psi;
+    return psi.filter( pes => splnujePesFiltry(pes, filter));
   }
 }
 

@@ -3,7 +3,7 @@
     <p v-if="loading">Nacitam data</p>
 
     <div v-if="!loading">
-      <h3>Pes č. {{ id }}</h3>
+    
       <p>Rasa: {{ dog.nazevPsa}}</p>
       <p>Kategorie: {{ dog.kategorie}}</p>
       <p>Země původu: {{ dog.zemePuvodu}}</p>
@@ -61,8 +61,13 @@ export default {
 margin-left: 200px;
 margin-right: 200px;
 padding: 10px;
-background-color: lightgreen;
+background-image: linear-gradient(to right, rgb(207, 251, 136), rgba(117, 238, 87, 0.911));
 border: 1px solid gray;
 }
+
+/*
+.detail p {
+  font-family: 'Lobster', cursive;P0
+} */
 
 </style>
