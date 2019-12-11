@@ -27,11 +27,10 @@ export default {
     };
   },
 
-  watch:{
-    filter: function(novyFilter, staryFilter){
-     this.filtrovaniPsi = filtrujPsy(this.psi,novyFilter);
+  watch: {
+    filter: function(novyFilter, staryFilter) {
+      this.filtrovaniPsi = filtrujPsy(this.psi, novyFilter);
     }
-
   },
   mounted() {
     fetch("/api/dogs.json")
@@ -50,13 +49,24 @@ export default {
   }
 };
 
+function mapujOdDo(odDoString) {
+  let promennaOdDo = odDoString.split("-");
+  return {
+    od: parseInt(promennaOdDo[0]),
+    do:
+      promennaOdDo.length > 1
+        ? parseInt(promennaOdDo[1])
+        : parseInt(promennaOdDo[0])
+  };
+}
+
 function filtrujPsy(psi, filter) {
   console.log("filtruj psy", filter);
   if (bezFiltru(filter)) {
     //když žádný filtr není vybrán, tak vrátí všechny psi
     return psi;
   } else {
-    return psi.filter( pes => splnujePesFiltry(pes, filter));
+    return psi.filter(pes => splnujePesFiltry(pes, filter));
   }
 }
 
@@ -74,6 +84,17 @@ function bezFiltru(filter) {
     return false;
   }
 }
+
+function splnujeRozsah(filterOdDo, pesOdDo){
+  if (filterOdDo.do < pesOdDo.od) {
+    return false;
+  } 
+  if (filterOdDo.od > pesOdDo.do) {
+    return false;
+  }
+  return true;
+}
+
 
 function splnujePesFiltry(hafan, filter) {
   let splnuje = true;
@@ -110,8 +131,27 @@ function splnujePesFiltry(hafan, filter) {
     }
   }
 
+  if (pouzitArrayFilter(filter.hmotnost)) {
+    let hmotnostSplnuje = filter.hmotnost.some(rozsahHmotnosti =>
+      splnujeRozsah(rozsahHmotnosti, mapujOdDo(hafan.hmotnost))
+    );
+     if (!hmotnostSplnuje) {
+      splnuje = false;
+    }
+  }
+  if (pouzitArrayFilter(filter.vyska)) {
+    let vyskuSplnuje = filter.vyska.some(rozsahVysky =>
+      splnujeRozsah(rozsahVysky, mapujOdDo(hafan.vyska))
+    );
+     if (!vyskuSplnuje) {
+      splnuje = false;
+    }
+  }
+
   return splnuje;
 }
+
+
 
 function pouzitBooleanFilter(boolFilter) {
   if (boolFilter != null) {
@@ -131,5 +171,4 @@ function pouzitArrayFilter(arrayFilter) {
 </script>
 
 <style>
-
 </style>
