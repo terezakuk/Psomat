@@ -71,7 +71,7 @@
       <input type="checkbox" id="terieri" value="Teriéři" v-model="kategorie" />
       <label for="terieri">Teriéři</label>
     </div>
-
+<br>
     <button v-on:click="vyhledat()">Vyhledat</button>
   </div>
 </template>

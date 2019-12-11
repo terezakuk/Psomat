@@ -6,6 +6,7 @@
     
       <p>Rasa: {{ dog.nazevPsa}}</p>
       <p>Kategorie: {{ dog.kategorie}}</p>
+       <img class="fotka" v-bind:src="dog.foto"> 
       <p>Země původu: {{ dog.zemePuvodu}}</p>
       <p>Hmotnost: {{ dog.hmotnost}}</p>
       <p>Výška: {{ dog.vyska}}</p>
@@ -16,7 +17,6 @@
       <p>Vhodný pro začátečníky: {{ dog.vhodnyProZacatecniky}}</p>
       <p>Vhodný do bytu: {{ dog.doBytu }}</p>
       <p>Zajímavost: {{ dog.zajimavost}}</p>
-      <img class="fotka" v-bind:src="dog.foto"> 
          
     </div>
   </div>
