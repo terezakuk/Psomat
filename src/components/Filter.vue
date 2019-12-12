@@ -128,9 +128,19 @@ function mapujBoolean(bool) {
 </script>
 
 <style>
-.tlacitko {
+.vyhledavac {
+  background-image: linear-gradient(
+    to right,
+    rgb(148, 144, 146),
+    rgb(197, 218, 167)
+  );
   display: grid;
- 
+}
+.tlacitko {
+padding: 20px;
+font-size: 25px;
+font-weight: bold;
+background-color:  rgb(207, 251, 136);
 }
 .selekce {
   display: grid;
@@ -144,13 +154,7 @@ function mapujBoolean(bool) {
 .selektor {
   grid-column: 1/3;
 }
-.vyhledavac {
-  background-image: linear-gradient(
-    to right,
-    rgb(148, 144, 146),
-    rgb(197, 218, 167)
-  );
-}
+
 h2 {
   font-size: 40px;
 }
