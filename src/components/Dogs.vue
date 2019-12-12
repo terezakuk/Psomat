@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="filtorvani">
     <p v-if="loading">Načítám data...</p>
     <ul v-if="!loading">
       <!-- <li v-for="pes in psi" v-bind:key="pes.id"> -->
@@ -171,4 +171,12 @@ function pouzitArrayFilter(arrayFilter) {
 </script>
 
 <style>
+
+.filtrovani{
+border: 1px solid gray;
+list-style: none;
+text-decoration: none;
+
+}
+  
 </style>

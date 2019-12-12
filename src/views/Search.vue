@@ -1,12 +1,15 @@
 <template>
   <div>
     <h1>Vyhledávání v kategoriích</h1>
+    <div class="rozdeleni">
     <filter-psu v-on:filtruj="filtruj($event)" />
     <div v-if="vyhledej">
       <dogs v-bind:filter="filter" />  
              
     </div>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -35,5 +38,9 @@ export default {
 </script>
 
 <style>
+.rozdeleni {
+  display: flex;
+  flex-direction: row;
+}
 
 </style>

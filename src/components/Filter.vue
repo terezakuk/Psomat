@@ -135,7 +135,7 @@ function mapujBoolean(bool) {
 .selekce {
 display: grid;  
 margin-left: 50px;
-margin-right: 50px;
+margin-right: 500px;
 padding: 10px;
 background-image: linear-gradient(to right, rgb(207, 251, 136));
 border: 10px dotted  white;

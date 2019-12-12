@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1>Detail jednoho psa</h1>
-
-     <dog v-bind:id="id" /> 
+ <dog v-bind:id="id" /> 
 
     <router-link to="/search">Zpet na vyhledávač</router-link>
   </div>
