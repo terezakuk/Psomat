@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Obrazovka vyhledavani</h1>
+    <h1>Vyhledávání v kategoriích</h1>
     <filter-psu v-on:filtruj="filtruj($event)" />
     <div v-if="vyhledej">
       <dogs v-bind:filter="filter" />  
@@ -35,4 +35,5 @@ export default {
 </script>
 
 <style>
+
 </style>

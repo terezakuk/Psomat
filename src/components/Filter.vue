@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class=vyhledavac>
     <h1></h1>
 
-    <div class="pokus">
-      <h3>Vyhledání psa dle vhodnosti zkušeností majitele</h3>
+    <div class="selekce">
+      <h3 class=prvni>Vyhledání psa dle vhodnosti zkušeností majitele</h3>
       <input type="checkbox" id="zacatecnik" value="true" v-model="vhodnyProZacatecniky" />
       <label for="zacatecnik">Vhodný pro začátečníky</label>
       <input type="checkbox" id="pokrocily" value="false" v-model="vhodnyProZacatecniky" />
@@ -72,7 +72,7 @@
       <label for="terieri">Teriéři</label>
     </div>
 <br>
-    <button v-on:click="vyhledat()">Vyhledat</button>
+    <button class=tlacitko v-on:click="vyhledat()">Vyhledat</button>
   </div>
 </template>
 
@@ -128,4 +128,32 @@ function mapujBoolean(bool) {
 </script>
 
 <style>
+
+.tlacitko{
+ display: grid;
+}
+.selekce {
+display: grid;  
+margin-left: 50px;
+margin-right: 50px;
+padding: 10px;
+background-image: linear-gradient(to right, rgb(207, 251, 136));
+border: 10px dotted  white;
+
+
+}
+.vyhledavac{
+  background-image: linear-gradient(to right,rgb(148, 144, 146),rgb(197, 218, 167));
+ 
+}
+
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 25px;
+}
+
+
+
 </style>

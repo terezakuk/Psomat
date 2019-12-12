@@ -58,8 +58,8 @@ export default {
 }
 
 .detail {
-margin-left: 200px;
-margin-right: 200px;
+margin-left: 40px;
+margin-right: 40px;
 padding: 10px;
 background-image: linear-gradient(to right, rgb(207, 251, 136), rgba(117, 238, 87, 0.911));
 border: 1px solid gray;
