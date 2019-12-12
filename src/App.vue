@@ -40,7 +40,8 @@
 }
 h1
 {
-  padding: 50px;
+  text-align: center;
+  padding: 20px;
 }
 
 .menu{

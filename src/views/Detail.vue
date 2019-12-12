@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Detail jednoho psa</h1>
+    <h1>Detail pejska</h1>
 
      <dog v-bind:id="id" /> 
 
