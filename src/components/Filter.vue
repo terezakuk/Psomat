@@ -1,6 +1,5 @@
 <template>
   <div class="vyhledavac">
-    <h1></h1>
 
     <div class="selekce">
       <h3 class="selektor">Vyhledání psa dle vhodnosti zkušeností majitele</h3>
@@ -137,15 +136,14 @@ function mapujBoolean(bool) {
   display: grid;
 }
 .tlacitko {
-padding: 20px;
-font-size: 25px;
-font-weight: bold;
-background-color:  rgb(207, 251, 136);
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgba(255, 0, 255, 0.4);
 }
 .selekce {
   display: grid;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 50px;
   padding: 10px;
   background-image: linear-gradient(to right, rgb(207, 251, 136));
   border: 10px dotted white;

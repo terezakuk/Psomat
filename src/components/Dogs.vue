@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <p v-if="loading">Načítám data...</p>
-    <ul v-if="!loading">
-      <!-- <li v-for="pes in psi" v-bind:key="pes.id"> -->
-      <li v-for="pes in filtrovaniPsi" v-bind:key="pes.id">
-        <router-link v-bind:to="`/dog/${pes.id}`">{{ pes.nazevPsa }}</router-link>
-      </li>
-    </ul>
-    <p v-if="filtrovaniPsi.length === 0">Žádný pejsek nesplňuje kritéria zadaného filtru.</p>
+  <div class="vyfiltrovaniPsi">
+    <div class="seznam">
+      <p v-if="loading">Načítám data...</p>
+      <ul v-if="!loading">
+        <!-- <li v-for="pes in psi" v-bind:key="pes.id"> -->
+        <li v-for="pes in filtrovaniPsi" v-bind:key="pes.id">
+          <router-link v-bind:to="`/dog/${pes.id}`">{{ pes.nazevPsa }}</router-link>
+        </li>
+      </ul>
+      <p v-if="filtrovaniPsi.length === 0">Žádný pejsek nesplňuje kritéria zadaného filtru.</p>
+    </div>
   </div>
 </template>
 
@@ -85,16 +87,15 @@ function bezFiltru(filter) {
   }
 }
 
-function splnujeRozsah(filterOdDo, pesOdDo){
+function splnujeRozsah(filterOdDo, pesOdDo) {
   if (filterOdDo.do < pesOdDo.od) {
     return false;
-  } 
+  }
   if (filterOdDo.od > pesOdDo.do) {
     return false;
   }
   return true;
 }
-
 
 function splnujePesFiltry(hafan, filter) {
   let splnuje = true;
@@ -135,7 +136,7 @@ function splnujePesFiltry(hafan, filter) {
     let hmotnostSplnuje = filter.hmotnost.some(rozsahHmotnosti =>
       splnujeRozsah(rozsahHmotnosti, mapujOdDo(hafan.hmotnost))
     );
-     if (!hmotnostSplnuje) {
+    if (!hmotnostSplnuje) {
       splnuje = false;
     }
   }
@@ -143,15 +144,13 @@ function splnujePesFiltry(hafan, filter) {
     let vyskuSplnuje = filter.vyska.some(rozsahVysky =>
       splnujeRozsah(rozsahVysky, mapujOdDo(hafan.vyska))
     );
-     if (!vyskuSplnuje) {
+    if (!vyskuSplnuje) {
       splnuje = false;
     }
   }
 
   return splnuje;
 }
-
-
 
 function pouzitBooleanFilter(boolFilter) {
   if (boolFilter != null) {
@@ -171,4 +170,19 @@ function pouzitArrayFilter(arrayFilter) {
 </script>
 
 <style>
+.vyfiltrovaniPsi {
+  background-image: linear-gradient(
+    to right,
+    rgb(148, 144, 146),
+    rgb(197, 218, 167)
+  );
+  display: grid;
+}
+.seznam {
+  margin: 50px;
+  padding: 10px;
+  background-image: linear-gradient(to right, rgb(207, 251, 136));
+  border: 10px dotted white;
+  grid-template-columns: 30px auto;
+}
 </style>

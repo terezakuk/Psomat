@@ -21,7 +21,7 @@
 .home {
   background: #68727c url('/images/background_image.jpg') center/cover no-repeat ;
   display: grid;
-   grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 100vh; 
   font-family: 'Lobster', cursive;
   margin-right: 100px;
@@ -41,7 +41,8 @@
 h1
 {
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+  margin: 0px;
 }
 
 .menu{
