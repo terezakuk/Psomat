@@ -1,11 +1,13 @@
 <template>
   <div>
-    <h1>Vyhledávání v kategoriích</h1>
-    <div class="rozdeleni">
+    <div class="nadpisVyhledavani">
+      <div class="nadpisVyhledavaniDruhy">
+        <h1>Vyhledávání v kategoriích</h1>
+      </div>
+    </div>
     <filter-psu v-on:filtruj="filtruj($event)" />
     <div v-if="vyhledej">
-      <dogs v-bind:filter="filter" />  
-             
+      <dogs v-bind:filter="filter" />
     </div>
     </div>
   </div>
@@ -16,7 +18,7 @@
 import Filter from "@/components/Filter.vue";
 import Dogs from "@/components/Dogs.vue";
 export default {
-   data() {
+  data() {
     return {
       filter: {},
       vyhledej: false
@@ -30,17 +32,21 @@ export default {
     filtruj(filter) {
       console.log("filtruj_v_search", filter);
       this.filter = filter;
-      this.vyhledej = true; 
+      this.vyhledej = true;
     }
-
   }
 };
 </script>
 
 <style>
-.rozdeleni {
-  display: flex;
-  flex-direction: row;
+.nadpisVyhledavani {
+  background-image: linear-gradient(
+    to right,
+    rgb(148, 144, 146),
+    rgb(197, 218, 167)
+  );
 }
-
+.nadpisVyhledavaniDruhy {
+  background-color: rgba(255, 0, 255, 0.4);
+}
 </style>

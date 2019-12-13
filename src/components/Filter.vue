@@ -1,21 +1,20 @@
 <template>
-  <div class=vyhledavac>
-    <h1></h1>
+  <div class="vyhledavac">
 
     <div class="selekce">
-      <h3 class=prvni>Vyhledání psa dle vhodnosti zkušeností majitele</h3>
+      <h3 class="selektor">Vyhledání psa dle vhodnosti zkušeností majitele</h3>
       <input type="checkbox" id="zacatecnik" value="true" v-model="vhodnyProZacatecniky" />
       <label for="zacatecnik">Vhodný pro začátečníky</label>
       <input type="checkbox" id="pokrocily" value="false" v-model="vhodnyProZacatecniky" />
       <label for="pokrocily">Vhodný pro pokročilé</label>
 
-      <h3>Vyhledání psa dle vhodnosti do bytu/zahrady</h3>
+      <h3 class="selektor">Vyhledání psa dle vhodnosti do bytu/zahrady</h3>
       <input type="checkbox" id="byt" value="true" v-model="doBytu" />
       <label for="byt">Vhodný do bytu</label>
       <input type="checkbox" id="zahrada" value="false" v-model="doBytu" />
       <label for="zahrada">Vhodný na zahradu</label>
 
-      <h3>Vztah psa k ostatním zvířatům</h3>
+      <h3 class="selektor">Vztah psa k ostatním zvířatům</h3>
       <input type="checkbox" id="dobry" value="dobrý" v-model="vztahKJinymZviratum" />
       <label for="dobry">Dobrý</label>
 
@@ -25,7 +24,7 @@
       <input type="checkbox" id="specificky" value="specifický" v-model="vztahKJinymZviratum" />
       <label for="specificky">Specifický</label>
 
-      <h3>Vyhledání psa dle hmotnosti</h3>
+      <h3 class="selektor">Vyhledání psa dle hmotnosti</h3>
 
       <input type="checkbox" id="lehky" value="0-15" v-model="hmotnost" />
       <label for="lehky">Pes do 15kg (včetně)</label>
@@ -33,7 +32,7 @@
       <input type="checkbox" id="tezky" value="16-99" v-model="hmotnost" />
       <label for="tezky">Pes nad 16kg</label>
 
-      <h3>Vyhledání psa dle výšky</h3>
+      <h3 class="selektor">Vyhledání psa dle výšky</h3>
 
       <input type="checkbox" id="maly" value="0-39" v-model="vyska" />
       <label for="maly">Pes do 39 centimetrů</label>
@@ -41,7 +40,7 @@
       <input type="checkbox" id="velky" value="40-150" v-model="vyska" />
       <label for="velky">Pes nad 40 centimetrů</label>
 
-      <h3>Vyhledání podle plemene</h3>
+      <h3 class="selektor">Vyhledání podle plemene</h3>
       <input type="checkbox" id="honici" value="Honiči a barváři" v-model="kategorie" />
       <label for="honici">Honiči a barváři</label>
       <input type="checkbox" id="chrti" value="Chrti" v-model="kategorie" />
@@ -71,8 +70,8 @@
       <input type="checkbox" id="terieri" value="Teriéři" v-model="kategorie" />
       <label for="terieri">Teriéři</label>
     </div>
-<br>
-    <button class=tlacitko v-on:click="vyhledat()">Vyhledat</button>
+    <br />
+    <button class="tlacitko" v-on:click="vyhledat()">Vyhledat</button>
   </div>
 </template>
 
@@ -128,32 +127,36 @@ function mapujBoolean(bool) {
 </script>
 
 <style>
-
-.tlacitko{
- display: grid;
+.vyhledavac {
+  background-image: linear-gradient(
+    to right,
+    rgb(148, 144, 146),
+    rgb(197, 218, 167)
+  );
+  display: grid;
+}
+.tlacitko {
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgba(255, 0, 255, 0.4);
 }
 .selekce {
-display: grid;  
-margin-left: 50px;
-margin-right: 500px;
-padding: 10px;
-background-image: linear-gradient(to right, rgb(207, 251, 136));
-border: 10px dotted  white;
-
-
+  display: grid;
+  margin: 50px;
+  padding: 10px;
+  background-image: linear-gradient(to right, rgb(207, 251, 136));
+  border: 10px dotted white;
+  grid-template-columns: 30px auto;
 }
-.vyhledavac{
-  background-image: linear-gradient(to right,rgb(148, 144, 146),rgb(197, 218, 167));
- 
+.selektor {
+  grid-column: 1/3;
 }
 
-h2{
+h2 {
   font-size: 40px;
 }
-h3{
+h3 {
   font-size: 25px;
 }
-
-
-
 </style>
