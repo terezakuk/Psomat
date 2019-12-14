@@ -1,11 +1,11 @@
 <template>
 
   <div class="home">
-    
-    <!--    <h1 class=hlavniNadpis>Psomat</h1> -->
+
+ 
     <router-link class="tlacitecko" to="/search">Začít</router-link>
     <div class="popis">
-    <!--   <h2>Jednoduchý a rychlý vyhledávač</h2> -->
+
     </div>
   </div>
 </template>
