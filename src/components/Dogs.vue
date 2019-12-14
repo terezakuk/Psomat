@@ -5,11 +5,16 @@
       <div v-if="!loading">
 		  
         <router-link v-bind:to="`/dog/${pes.id}`" v-for="pes in filtrovaniPsi" v-bind:key="pes.id" class="plemeno">
+			
+		
 			<div :style="`background-image: url( ${ pes.foto } )`" class="foto-plemene"></div>
 			<div class="pes-info">
 				<div class="nazev-plemene"> {{ pes.nazevPsa }} </div>
 				<div class="popis-plemene"> {{ pes.zajimavost }} </div>
 			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-next">
+				<path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+			</svg>
           </router-link>
 
       </div>
@@ -195,12 +200,12 @@ function pouzitArrayFilter(arrayFilter) {
 	text-decoration: none;
 	color: black;
 	padding: 20px;
-	background-image: linear-gradient( #E4E4E4, #EAEAEA )
+	background-image: linear-gradient( #E4E4E4, #EAEAEA );
 }
 
 .foto-plemene
 {
-	width: 100px;
+	flex: 0 0 80px;
 	height: 80px;
 	padding-left: 10px;
 	background-size: cover;
@@ -211,12 +216,18 @@ function pouzitArrayFilter(arrayFilter) {
 .pes-info
 {
 	flex: 1;
+  	overflow: hidden;
 }
 
 .nazev-plemene
 {
 	padding-left: 10px;
 	font-size: 22px;
+	font-weight: bold;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .popis-plemene
@@ -230,6 +241,12 @@ function pouzitArrayFilter(arrayFilter) {
 	height: 18px;
 
 	font-size: 16px;
+}
+
+.icon-next {
+	width: 20px;
+	transform: rotate(180deg);
+	margin-left: 10px;
 }
 
 </style>
