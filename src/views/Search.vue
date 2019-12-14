@@ -25,13 +25,3 @@ export default {
   }
 };
 </script>
-
-<style> /*
-.nadpisVyhledavani {
-display: none;
-
-}
-.nadpisVyhledavaniDruhy {
-  background-color: rgba(255, 0, 255, 0.4);
-} */
-</style>

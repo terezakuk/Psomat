@@ -27,7 +27,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
            <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
           </svg>
-          Byt / zahrada
+          Do bytu / na zahradu
         </div> 
         <div class="text"> 
           <input type="checkbox" id="byt" value="true" v-model="doBytu" />
@@ -94,7 +94,7 @@
           <label for="velky">Pes nad 40 centimetrů</label>
         </div>
       </div>
-<div class="group">
+      <div class="group">
         <div class="selektor">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
            <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
@@ -147,11 +147,11 @@
    </div>
   
      
-      </div> 
+    </div> 
     
-    <button class="tlacidlo" v-on:click="vyhledat()">Vyhledat</button>
+      <button class="tlacidlo" v-on:click="vyhledat()">Vyhledat</button>
 
-  </div> 
+    </div> 
 
 </template>
 
@@ -220,6 +220,7 @@ function mapujBoolean(bool) {
   display: flex;
   flex-direction: column;
   background-color: #EFEFEF;
+  
 }
 
 .viewbox{
@@ -234,8 +235,6 @@ function mapujBoolean(bool) {
   padding: 20px;
   height: 30px;
   vertical-align: middle; 
-  
-  
 }
 .text{
   font-size: 20px;
@@ -255,6 +254,12 @@ function mapujBoolean(bool) {
   background-color: rgb(127, 182, 133);
   flex: 0 0 80px;
   text-transform: uppercase;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px;
+
+  
 }
 .icon-previous{
   width: 20px;
