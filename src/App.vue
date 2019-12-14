@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class=menu id="nav">
-      <router-link to="/">Úvod</router-link> |
-      <router-link to="/search">Vyhledávač psů</router-link>
+<!--       <router-link to="/">Úvod</router-link> |
+      <router-link to="/search">Vyhledávač psů</router-link> -->
       
        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     
@@ -25,8 +25,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 100vh; 
   font-family: 'Lobster', cursive;
-/*   margin-right: 50px;
-  margin-left: 50px; */
   color: pink;
   text-shadow: 1px 3px gray;
   max-height: 951px;
@@ -35,7 +33,6 @@
   background-repeat: no-repeat;
   background-size: cover;  
 }
-
 
 
 

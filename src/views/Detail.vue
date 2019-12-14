@@ -4,7 +4,7 @@
 
      <dog v-bind:id="id" /> 
 
-    <router-link to="/search">Zpet na vyhledávač</router-link>
+    <router-link to="/search">Zpět na vyhledávač</router-link>
   </div>
 </template>
 
