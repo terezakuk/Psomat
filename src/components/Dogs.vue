@@ -5,7 +5,13 @@
       <ul v-if="!loading">
         <!-- <li v-for="pes in psi" v-bind:key="pes.id"> -->
         <li v-for="pes in filtrovaniPsi" v-bind:key="pes.id">
-          <router-link v-bind:to="`/dog/${pes.id}`">{{ pes.nazevPsa }}</router-link>
+          <div class="vyhledano">
+            <div class="foto">
+            <router-link v-bind:to="`/dog/${pes.id}`">
+              <div class="popis">{{ pes.nazevPsa }}</div>
+            </router-link>
+          </div>
+          </div>
         </li>
       </ul>
       <p v-if="filtrovaniPsi.length === 0">Žádný pejsek nesplňuje kritéria zadaného filtru.</p>
@@ -35,12 +41,14 @@ export default {
     }
   },
   mounted() {
+    console.log("mounted")
     fetch("/api/dogs.json")
       .then(response => response.json())
       .then(data => {
         this.psi = data;
         this.filtrovaniPsi = filtrujPsy(this.psi, this.filter);
         this.loading = false;
+        console.log( "dogs loaded", this )
         console.log("loading skoncil", this.psi.length);
         console.log("filter_v_dogs", this.filter);
         console.log("vyfiltrovaniPsi", this.filtrovaniPsi);
@@ -98,7 +106,6 @@ function splnujeRozsah(filterOdDo, pesOdDo) {
 }
 
 function splnujePesFiltry(hafan, filter) {
-
   if (pouzitBooleanFilter(filter.doBytu)) {
     if (filter.doBytu != hafan.doBytu) {
       return false;
@@ -170,19 +177,25 @@ function pouzitArrayFilter(arrayFilter) {
 </script>
 
 <style>
-.vyfiltrovaniPsi {
-  background-image: linear-gradient(
-    to right,
-    rgb(148, 144, 146),
-    rgb(197, 218, 167)
-  );
+.vyhledano {
   display: grid;
+  margin: 10px;
+  grid-template-columns: 50px, auto;
+  grid-template-rows: 1fr, 1fr;
+  
+
 }
-.seznam {
-  margin: 50px;
-  padding: 10px;
-  background-image: linear-gradient(to right, rgb(207, 251, 136));
-  border: 10px dotted white;
-  grid-template-columns: 30px auto;
+
+.popisek {
+  margin: 10px;
+  color: gray;
+  text-transform: uppercase;
+}
+
+li .fotka {
+  text-decoration: none;
+}
+img .fotka {
+  grid-auto-columns: 50px;
 }
 </style>

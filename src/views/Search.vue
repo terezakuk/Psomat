@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style>
+<style> /*
 .nadpisVyhledavani {
   background-image: linear-gradient(
     to right,
@@ -42,5 +42,5 @@ export default {
 }
 .nadpisVyhledavaniDruhy {
   background-color: rgba(255, 0, 255, 0.4);
-}
+} */
 </style>

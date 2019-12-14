@@ -1,27 +1,55 @@
 <template>
   <div>
+    <child-screen>
+      <dogs v-bind:filter="filter" />
+<!--
+      <button class="tlacitko"><router-link to="/search">Zpět</router-link></button>
 
-    <dogs v-bind:filter="$route.query" />
+       <button class="tlacitko" v-on:click="vyhledat()">Zpět</button>*/ -->
 
-    <router-link to="/search">Zpet na vyhledávač</router-link>
-  </div>
+      <div class="vyhledano"> </div>
+    </child-screen>
+ 
+ </div>
 
 </template>
 
 <script>
 import Dogs from "@/components/Dogs.vue";
+import { getDefaultData } from "@/components/Filter.vue";
+import ChildScreen from "@/components/Child-screen.vue";
+
 export default {
-  
+
+  data: () =>
+  {
+    return {
+      filter: getDefaultData()
+    }
+  },
   components: {
-    dogs: Dogs
+    dogs: Dogs,
+    'child-screen': ChildScreen,
   },
 
-  mounted()
-  {
-      console.log( this.$route.query )
-  }
+  mounted() {
+    console.log( getDefaultData() )
+    this.filter = { ...getDefaultData(), ...this.$route.query }
+  },
 }
+
 </script>
 
 <style>
+
+.tlacitko {
+  flex: 1;
+  height: 80px;
+  background-color: #1e2d2f;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  width: 100%;
+}
+
 </style>
