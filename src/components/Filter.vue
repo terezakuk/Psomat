@@ -70,7 +70,7 @@
       <input type="checkbox" id="terieri" value="Teriéři" v-model="kategorie" />
       <label for="terieri">Teriéři</label>
     </div>
-    <br />
+    
     <button class="tlacitko" v-on:click="vyhledat()">Vyhledat</button>
   </div>
 </template>
@@ -129,35 +129,31 @@ function mapujBoolean(bool) {
 
 <style>
 .vyhledavac {
-  background-image: linear-gradient(
-    to right,
-    rgb(148, 144, 146),
-    rgb(197, 218, 167)
-  );
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+.selekce{
+  overflow: auto;
+  flex: 1;
 }
 .tlacitko {
-  padding: 20px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
-  background-color: rgba(255, 0, 255, 0.4);
+  color: white; 
+  background-color: rgb(127, 182, 133);
+  flex: 0 0 80px;
+ 
+  
+  
 }
 .selekce {
-  display: grid;
-  margin: 50px;
-  padding: 10px;
-  background-image: linear-gradient(to right, rgb(207, 251, 136));
-  border: 10px dotted white;
-  grid-template-columns: 30px auto;
+  display: grid; 
+  padding:20px;
+  grid-template-columns: 30px auto; 
 }
 .selektor {
   grid-column: 1/3;
 }
 
-h2 {
-  font-size: 40px;
-}
-h3 {
-  font-size: 25px;
-}
+
 </style>
