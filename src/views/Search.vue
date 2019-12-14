@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div class="nadpisVyhledavani">
-      <div class="nadpisVyhledavaniDruhy">
-        <h1>Vyhledávání v kategoriích</h1>
-      </div>
-    </div>
     <filter-psu v-on:filtruj="filtruj($event)" />
   </div>
 

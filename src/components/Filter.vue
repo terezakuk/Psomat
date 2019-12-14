@@ -4,22 +4,22 @@
     <div class="viewbox">
 
       <div class="group">
-        <div class="selektor">Vyhledání psa dle zkušeností majitele</div> 
+        <div class="selektor">Zkušenosti majitele</div> 
         <div class="text" > 
           <input type="checkbox" id="zacatecnik" value="true" v-model="vhodnyProZacatecniky" />
           <label for="zacatecnik">Vhodný pro začátečníky</label>
         </div> 
-        <div> 
+        <div class="text"> 
           <input type="checkbox" id="pokrocily" value="false" v-model="vhodnyProZacatecniky" />
-          <label class="text" for="pokrocily">Vhodný pro pokročilé</label>
+          <label for="pokrocily">Vhodný pro pokročilé</label>
         </div>
       </div>
        
       <div class="group">
-        <div class="selektor">Vyhledání psa dle vhodnosti do bytu/zahrady</div> 
+        <div class="selektor">Byt / zahrada</div> 
         <div class="text"> 
           <input type="checkbox" id="byt" value="true" v-model="doBytu" />
-          <label class="text" for="byt">Vhodný do bytu</label>
+          <label for="byt">Vhodný do bytu</label>
         </div> 
         <div class="text"> 
           <input type="checkbox" id="zahrada" value="false" v-model="doBytu" />
@@ -119,11 +119,14 @@
        <div class="text" >
           <input type="checkbox" id="terieri" value="Teriéři" v-model="kategorie" />
           <label for="terieri">Teriéři</label>
+          
        </div> 
+        
       </div> 
+     
     <button class="tlacitko" v-on:click="vyhledat()">Vyhledat</button>
-  </div> -->
-
+  </div> 
+-->
 </template>
 
 <script>
@@ -191,6 +194,7 @@ function mapujBoolean(bool) {
   display: flex;
   flex-direction: column;
 }
+
 .viewbox{
   overflow: auto;
   flex: 1;
@@ -199,8 +203,21 @@ function mapujBoolean(bool) {
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
-  background-image: linear-gradient( #E4E4E4 (up) - #EAEAEA (down));
+  background-image: linear-gradient( #E4E4E4, #EAEAEA);
+  padding: 20px;
+  height: 30px;
+  vertical-align: middle; 
+  
+}
+.text{
+  font-size: 20px;
+ /*  margin: 5px; */
+  padding: 7px 20px; 
+  background-color: #EFEFEF;
+}
 
+.text input{
+  margin-right: 10px;
 }
 .tlacitko {
   font-size: 22px;
@@ -210,11 +227,7 @@ function mapujBoolean(bool) {
   flex: 0 0 80px;
   text-transform: uppercase;
 }
-.text{
-  font-size: 20px;
-  margin: 5px;
-  padding: 5px;
-}
+
 /* .selekce {
   display: grid; 
   padding:20px;
