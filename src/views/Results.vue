@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <dogs v-bind:filter="$route.query" />
+    <dogs v-bind:filter="filter" />
 
     <router-link to="/search">Zpet na vyhledávač</router-link>
   </div>
@@ -16,9 +16,23 @@ export default {
     dogs: Dogs
   },
 
+  data: () =>
+  ({
+	  filter: {}
+  }),
+
   mounted()
   {
-      console.log( this.$route.query )
+	  this.filter = 
+	  {
+		vztahKJinymZviratum: [],
+		hmotnost: [],
+		vyska: [],
+		doBytu: null,
+		vhodnyProZacatecniky: null,
+		kategorie: [],
+		...this.$route.query
+	  }
   }
 }
 </script>

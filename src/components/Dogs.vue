@@ -38,7 +38,16 @@ export default {
     fetch("/api/dogs.json")
       .then(response => response.json())
       .then(data => {
-        this.psi = data;
+
+		Object.keys( this.filter ).forEach( key =>
+		{
+			if ( this.filter[ key ] === "true" )
+			{
+				this.filter[ key ] = true
+			}
+		})
+
+		this.psi = data;
         this.filtrovaniPsi = filtrujPsy(this.psi, this.filter);
         this.loading = false;
         console.log("loading skoncil", this.psi.length);
