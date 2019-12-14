@@ -4,7 +4,14 @@
     <div class="viewbox">
 
       <div class="group">
-        <div class="selektor">Zkušenosti majitele</div> 
+        <div class="selektor"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
+           <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+          </svg>
+          
+          Zkušenosti majitele
+        </div>
+
         <div class="text" > 
           <input type="checkbox" id="zacatecnik" value="true" v-model="vhodnyProZacatecniky" />
           <label for="zacatecnik">Vhodný pro začátečníky</label>
@@ -16,7 +23,12 @@
       </div>
        
       <div class="group">
-        <div class="selektor">Byt / zahrada</div> 
+        <div class="selektor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
+           <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+          </svg>
+          Byt / zahrada
+        </div> 
         <div class="text"> 
           <input type="checkbox" id="byt" value="true" v-model="doBytu" />
           <label for="byt">Vhodný do bytu</label>
@@ -29,7 +41,11 @@
       
 
       <div class="group">
-        <div class="selektor">Vztah psa k ostatním zvířatům</div>
+        <div class="selektor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
+           <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+          </svg>
+          Vztah psa ke zvířatům</div>
         <div class="text"> 
           <input type="checkbox" id="dobry" value="dobrý" v-model="vztahKJinymZviratum" />
           <label for="dobry">Dobrý</label>
@@ -45,7 +61,12 @@
       </div>
 
       <div class="group">
-        <div class="selektor">Vyhledání psa dle hmotnosti</div>
+        <div class="selektor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
+           <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+          </svg>
+          Podle hmotnosti</div>
+
         <div class="text">
           <input type="checkbox" id="lehky" value="0-15" v-model="hmotnost" />
           <label for="lehky">Pes do 15kg (včetně)</label>
@@ -57,7 +78,12 @@
       </div>
 
       <div class="group">
-        <div class="selektor">Vyhledání psa dle výšky</div>
+        <div class="selektor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
+           <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+          </svg>
+          Podle výšky
+          </div>
         <div class="text" >
           <input type="checkbox" id="maly" value="0-39" v-model="vyska" />
           <label for="maly">Pes do 39 centimetrů</label>
@@ -68,60 +94,63 @@
           <label for="velky">Pes nad 40 centimetrů</label>
         </div>
       </div>
-
-   </div>
-  
-   <!-- 
-     <div class="group">
-        <div class="selektor">Vyhledání podle plemene</div>
+<div class="group">
+        <div class="selektor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-previous">
+           <path d="M7 13.1l8.9 8.9c.8-.8.8-2 0-2.8l-6.1-6.1 6-6.1c.8-.8.8-2 0-2.8L7 13.1z"/>
+          </svg>
+          Podle plemene
+          </div>
          <div class="text" >
           <input type="checkbox" id="honici" value="Honiči a barváři" v-model="kategorie" />
           <label for="honici">Honiči a barváři</label>
-        
+         </div>
        <div class="text" >
           <input type="checkbox" id="chrti" value="Chrti" v-model="kategorie" />
           <label for="chrti">Chrti</label>
        </div>
-      <div class="text" >
-        <input type="checkbox" id="jezevcici" value="Jezevčíci" v-model="kategorie" />
-        <label for="jezevcici">Jezevčíci</label>
-      </div>
-      <div class="text" >
-        <input type="checkbox"
-        id="pincove"
-        value="Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi"
-        v-model="kategorie" />
-        <label for="pincove">Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi</label>
-      </div>
-      <div class="text" >
-       <input
-        type="checkbox"
-        id="ovcaci"
-        value="Plemena ovčácká, pastevecká a honácká"
-        v-model="kategorie"/>
-        <label for="ovcaci">Plemena ovčácká, pastevecká a honácká</label>
-      </div>
-      <div class="text" > 
-        <input type="checkbox" id="slidici" value="Slídiči, retrívři a vodní psi" v-model="kategorie" />
-        <label for="slidici">Slídiči, retrívři a vodní psi</label>
-     </div>
-      <div class="text" >
-        <input type="checkbox" id="spolecenska" value="Společenská plemena" v-model="kategorie" />
-       <label for="spolecenska">Společenská plemena</label>
-      </div>
-      <div class="text" >
-       <input type="checkbox" id="spicove" value="Špicové a plemena primitivní" v-model="kategorie" />
-       <label for="spicove">Špicové a plemena primitivní</label>
-      </div>
+        <div class="text" >
+          <input type="checkbox" id="jezevcici" value="Jezevčíci" v-model="kategorie" />
+          <label for="jezevcici">Jezevčíci</label>
+       </div>
+        <div class="text" >
+          <input type="checkbox"
+          id="pincove"
+          value="Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi"
+          v-model="kategorie" />
+          <label for="pincove">Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi</label>
+        </div>
+       <div class="text" >
+          <input
+          type="checkbox"
+          id="ovcaci"
+          value="Plemena ovčácká, pastevecká a honácká"
+          v-model="kategorie"/>
+          <label for="ovcaci">Plemena ovčácká, pastevecká a honácká</label>
+        </div>
+        <div class="text" > 
+          <input type="checkbox" id="slidici" value="Slídiči, retrívři a vodní psi" v-model="kategorie" />
+          <label for="slidici">Slídiči, retrívři a vodní psi</label>
+        </div>
+        <div class="text" >
+          <input type="checkbox" id="spolecenska" value="Společenská plemena" v-model="kategorie" />
+          <label for="spolecenska">Společenská plemena</label>
+        </div>
+        <div class="text" >
+          <input type="checkbox" id="spicove" value="Špicové a plemena primitivní" v-model="kategorie" />
+          <label for="spicove">Špicové a plemena primitivní</label>
+        </div>
        <div class="text" >
           <input type="checkbox" id="terieri" value="Teriéři" v-model="kategorie" />
           <label for="terieri">Teriéři</label>
-          
-       </div> 
-        
+       </div>
+   </div>
+  
+     
       </div> 
-     -->
+    
     <button class="tlacidlo" v-on:click="vyhledat()">Vyhledat</button>
+
   </div> 
 
 </template>
@@ -212,6 +241,7 @@ function mapujBoolean(bool) {
   font-size: 20px;
   margin: 5px; 
   padding: 7px 20px; 
+  display: flex;
   
 }
 
@@ -226,7 +256,10 @@ function mapujBoolean(bool) {
   flex: 0 0 80px;
   text-transform: uppercase;
 }
-
+.icon-previous{
+  width: 20px;
+  transform: rotate(270deg)
+}
 /* .selekce {
   display: grid; 
   padding:20px;
