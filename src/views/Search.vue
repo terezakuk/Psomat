@@ -6,33 +6,27 @@
       </div>
     </div>
     <filter-psu v-on:filtruj="filtruj($event)" />
-    <div v-if="vyhledej">
-      <dogs v-bind:filter="filter" />
-    </div>
-    </div>
+    
   </div>
 
 </template>
 
 <script>
 import Filter from "@/components/Filter.vue";
-import Dogs from "@/components/Dogs.vue";
+
+import router from "@/router";
 export default {
   data() {
     return {
-      filter: {},
-      vyhledej: false
+      filter: {}
     };
   },
   components: {
-    "filter-psu": Filter,
-    dogs: Dogs
+    "filter-psu": Filter
   },
   methods: {
     filtruj(filter) {
-      console.log("filtruj_v_search", filter);
-      this.filter = filter;
-      this.vyhledej = true;
+      router.push({ path: 'results', query: filter })
     }
   }
 };

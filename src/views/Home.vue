@@ -4,7 +4,9 @@
  
   <div class="app">
   <div class="home">
-<!--     <router-link to="/search"> otevri vyhledavac psu</router-link> -->
+
+    <h1>O Psomatu</h1>
+   
    </div>
 </div>
 
