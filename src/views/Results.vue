@@ -15,17 +15,10 @@
 
 <script>
 import Dogs from "@/components/Dogs.vue";
-import { getDefaultData } from "@/components/Filter.vue";
 import ChildScreen from "@/components/Child-screen.vue";
 
 export default {
 
-  data: () =>
-  {
-    return {
-      filter: getDefaultData()
-    }
-  },
   components: {
     dogs: Dogs,
     'child-screen': ChildScreen,
