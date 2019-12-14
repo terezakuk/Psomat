@@ -98,15 +98,15 @@ function splnujeRozsah(filterOdDo, pesOdDo) {
 }
 
 function splnujePesFiltry(hafan, filter) {
-  let splnuje = true;
+
   if (pouzitBooleanFilter(filter.doBytu)) {
     if (filter.doBytu != hafan.doBytu) {
-      splnuje = false;
+      return false;
     }
   }
   if (pouzitBooleanFilter(filter.vhodnyProZacatecniky)) {
     if (filter.vhodnyProZacatecniky != hafan.vhodnyProZacatecniky) {
-      splnuje = false;
+      return false;
     }
   }
   if (pouzitArrayFilter(filter.vztahKJinymZviratum)) {
@@ -117,7 +117,7 @@ function splnujePesFiltry(hafan, filter) {
       }
     });
     if (!vztahSplnuje) {
-      splnuje = false;
+      return false;
     }
   }
   if (pouzitArrayFilter(filter.kategorie)) {
@@ -128,7 +128,7 @@ function splnujePesFiltry(hafan, filter) {
       }
     });
     if (!kategorieSplnuje) {
-      splnuje = false;
+      return false;
     }
   }
 
@@ -137,7 +137,7 @@ function splnujePesFiltry(hafan, filter) {
       splnujeRozsah(rozsahHmotnosti, mapujOdDo(hafan.hmotnost))
     );
     if (!hmotnostSplnuje) {
-      splnuje = false;
+      return false;
     }
   }
   if (pouzitArrayFilter(filter.vyska)) {
@@ -145,11 +145,11 @@ function splnujePesFiltry(hafan, filter) {
       splnujeRozsah(rozsahVysky, mapujOdDo(hafan.vyska))
     );
     if (!vyskuSplnuje) {
-      splnuje = false;
+      return false;
     }
   }
 
-  return splnuje;
+  return true;
 }
 
 function pouzitBooleanFilter(boolFilter) {

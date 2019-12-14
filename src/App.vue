@@ -3,6 +3,7 @@
     <div class=menu id="nav">
       <router-link to="/">Úvod</router-link> |
       <router-link to="/search">Vyhledávač psů</router-link>
+      
        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     
     </div>

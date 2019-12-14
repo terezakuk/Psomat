@@ -114,6 +114,7 @@ function mapujOdDo(odDoString) {
 }
 
 function mapujBoolean(bool) {
+  console.log( bool, bool[0] )
   if (bool.length === 0 || bool.length === 2) {
     return null;
   } else {
