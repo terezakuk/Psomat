@@ -254,12 +254,7 @@ function mapujBoolean(bool) {
   background-color: rgb(127, 182, 133);
   flex: 0 0 80px;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  padding: 20px;
-
-  
+  position: flex;
 }
 .icon-previous{
   width: 20px;
