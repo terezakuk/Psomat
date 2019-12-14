@@ -19,15 +19,20 @@
 } 
 
 .home {
-  background: #68727c url('/images/background_image.jpg') center/cover no-repeat ;
+  background: #68727c url('/images/background_image.jpg')/*  center/cover no-repeat */ ;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100vh; 
   font-family: 'Lobster', cursive;
-  margin-right: 100px;
-  margin-left: 100px;
+/*   margin-right: 50px;
+  margin-left: 50px; */
   color: pink;
   text-shadow: 1px 3px gray;
+  max-height: 951px;
+  min-width: 400px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
 }
 
 .nav {
