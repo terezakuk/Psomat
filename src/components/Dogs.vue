@@ -196,7 +196,6 @@ function pouzitArrayFilter(arrayFilter) {
 	display: flex;
 	grid-template-areas: "foto nazev" "foto popis";
 	height: 85px;
-
 	text-decoration: none;
 	color: black;
 	padding: 20px;

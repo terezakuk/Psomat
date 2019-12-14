@@ -1,15 +1,16 @@
 <template>
   <div>
-    <h1>Detail pejska</h1>
 
-     <dog v-bind:id="id" /> 
+	<child-screen>
+      <dog v-bind:id="id" /> 
+    </child-screen>
 
-    <router-link to="/search">Zpět na vyhledávač</router-link>
   </div>
 </template>
 
 <script>
 import Dog from'../components/Dog.vue'
+import ChildScreen from "@/components/Child-screen.vue";
 
 export default {
   props: {
@@ -19,7 +20,8 @@ export default {
     }
   },
   components: {
-    dog: Dog
+	dog: Dog,
+	'child-screen': ChildScreen,
   }
 };
 </script>
