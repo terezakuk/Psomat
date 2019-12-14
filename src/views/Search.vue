@@ -7,6 +7,7 @@
     </div>
     <filter-psu v-on:filtruj="filtruj($event)" />
   </div>
+
 </template>
 
 <script>
@@ -30,13 +31,12 @@ export default {
 };
 </script>
 
-<style>
+<style> /*
 .nadpisVyhledavani {
 display: none;
 
 }
 .nadpisVyhledavaniDruhy {
- /*  background-color: rgba(255, 0, 255, 0.4); */
-display: none;
-}
+  background-color: rgba(255, 0, 255, 0.4);
+} */
 </style>

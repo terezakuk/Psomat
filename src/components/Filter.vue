@@ -127,16 +127,22 @@
 </template>
 
 <script>
+
+export function getDefaultData()
+{
+  return {
+    vztahKJinymZviratum: [],
+    hmotnost: [],
+    vyska: [],
+    doBytu: [],
+    vhodnyProZacatecniky: [],
+    kategorie: []
+  }
+}
+
 export default {
   data() {
-    return {
-      vztahKJinymZviratum: [],
-      hmotnost: [],
-      vyska: [],
-      doBytu: [],
-      vhodnyProZacatecniky: [],
-      kategorie: []
-    };
+    return getDefaultData();
   },
 
   methods: {
@@ -153,6 +159,7 @@ export default {
       console.log(filter);
       this.$emit("filtruj", filter);
     }
+
   }
 };
 
