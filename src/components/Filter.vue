@@ -68,40 +68,37 @@
           <label for="velky">Pes nad 40 centimetrů</label>
         </div>
       </div>
-    
+
    </div>
-  </div>
+  
    <!-- 
-    <div>
-      <div class="selektor">Vyhledání podle plemene</div>
+     <div class="group">
+        <div class="selektor">Vyhledání podle plemene</div>
+         <div class="text" >
+          <input type="checkbox" id="honici" value="Honiči a barváři" v-model="kategorie" />
+          <label for="honici">Honiči a barváři</label>
+        
+       <div class="text" >
+          <input type="checkbox" id="chrti" value="Chrti" v-model="kategorie" />
+          <label for="chrti">Chrti</label>
+       </div>
       <div class="text" >
-      <input type="checkbox" id="honici" value="Honiči a barváři" v-model="kategorie" />
-      <label for="honici">Honiči a barváři</label>
+        <input type="checkbox" id="jezevcici" value="Jezevčíci" v-model="kategorie" />
+        <label for="jezevcici">Jezevčíci</label>
       </div>
       <div class="text" >
-      <input type="checkbox" id="chrti" value="Chrti" v-model="kategorie" />
-      <label for="chrti">Chrti</label>
-      </div>
-      <div class="text" >
-      <input type="checkbox" id="jezevcici" value="Jezevčíci" v-model="kategorie" />
-      <label for="jezevcici">Jezevčíci</label>
-      </div>
-      <div class="text" >
-        <input
-        type="checkbox"
+        <input type="checkbox"
         id="pincove"
         value="Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi"
-        v-model="kategorie"
-      />
-      <label for="pincove">Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi</label>
+        v-model="kategorie" />
+        <label for="pincove">Pinčové, knírači, plemena molossoidní a švýcarští salašničtí psi</label>
       </div>
       <div class="text" >
        <input
         type="checkbox"
         id="ovcaci"
         value="Plemena ovčácká, pastevecká a honácká"
-        v-model="kategorie"
-        />
+        v-model="kategorie"/>
         <label for="ovcaci">Plemena ovčácká, pastevecká a honácká</label>
       </div>
       <div class="text" > 
@@ -123,10 +120,10 @@
        </div> 
         
       </div> 
-     
-    <button class="tlacitko" v-on:click="vyhledat()">Vyhledat</button>
+     -->
+    <button class="tlacidlo" v-on:click="vyhledat()">Vyhledat</button>
   </div> 
--->
+
 </template>
 
 <script>
@@ -193,6 +190,7 @@ function mapujBoolean(bool) {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #EFEFEF;
 }
 
 .viewbox{
@@ -208,18 +206,19 @@ function mapujBoolean(bool) {
   height: 30px;
   vertical-align: middle; 
   
+  
 }
 .text{
   font-size: 20px;
- /*  margin: 5px; */
+  margin: 5px; 
   padding: 7px 20px; 
-  background-color: #EFEFEF;
+  
 }
 
 .text input{
   margin-right: 10px;
 }
-.tlacitko {
+.tlacidlo {
   font-size: 22px;
   font-weight: bold;
   color: white; 
