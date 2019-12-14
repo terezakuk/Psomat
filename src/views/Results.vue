@@ -48,14 +48,4 @@ export default {
 
 <style>
 
-.tlacitko {
-  flex: 1;
-  height: 80px;
-  background-color: #1e2d2f;
-  color: white;
-  text-transform: uppercase;
-  padding: 20px;
-  width: 100%;
-}
-
 </style>

@@ -2,18 +2,17 @@
   <div class="vyfiltrovaniPsi">
     <div class="seznam">
       <p v-if="loading">Načítám data...</p>
-      <ul v-if="!loading">
-        <!-- <li v-for="pes in psi" v-bind:key="pes.id"> -->
-        <li v-for="pes in filtrovaniPsi" v-bind:key="pes.id">
-          <div class="vyhledano">
-            <div class="foto">
-            <router-link v-bind:to="`/dog/${pes.id}`">
-              <div class="popis">{{ pes.nazevPsa }}</div>
-            </router-link>
-          </div>
-          </div>
-        </li>
-      </ul>
+      <div v-if="!loading">
+		  
+        <router-link v-bind:to="`/dog/${pes.id}`" v-for="pes in filtrovaniPsi" v-bind:key="pes.id" class="plemeno">
+			<div :style="`background-image: url( ${ pes.foto } )`" class="foto-plemene"></div>
+			<div class="pes-info">
+				<div class="nazev-plemene"> {{ pes.nazevPsa }} </div>
+				<div class="popis-plemene"> {{ pes.zajimavost }} </div>
+			</div>
+          </router-link>
+
+      </div>
       <p v-if="filtrovaniPsi.length === 0">Žádný pejsek nesplňuje kritéria zadaného filtru.</p>
     </div>
   </div>
@@ -186,25 +185,51 @@ function pouzitArrayFilter(arrayFilter) {
 </script>
 
 <style>
-.vyhledano {
-  display: grid;
-  margin: 10px;
-  grid-template-columns: 50px, auto;
-  grid-template-rows: 1fr, 1fr;
-  
 
-}
+.plemeno
+{
+	display: flex;
+	grid-template-areas: "foto nazev" "foto popis";
+	height: 85px;
 
-.popisek {
-  margin: 10px;
-  color: gray;
-  text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+	padding: 20px;
+	background-image: linear-gradient( #E4E4E4, #EAEAEA )
 }
 
-li .fotka {
-  text-decoration: none;
+.foto-plemene
+{
+	width: 100px;
+	height: 80px;
+	padding-left: 10px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
-img .fotka {
-  grid-auto-columns: 50px;
+
+.pes-info
+{
+	flex: 1;
 }
+
+.nazev-plemene
+{
+	padding-left: 10px;
+	font-size: 22px;
+}
+
+.popis-plemene
+{
+	grid-area: popis;
+	overflow: hidden;
+
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	height: 18px;
+
+	font-size: 16px;
+}
+
 </style>

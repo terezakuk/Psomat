@@ -36,35 +36,7 @@
   background-size: cover;  
 }
 
-.nav {
-  font-family: 'Lobster', cursive;
-  margin-right: 100px;
-  margin-left: 100px;
-  text-align: left;
-  color: pink;
-  text-shadow: 1px 3px gray;
-}
 
-.popis {
-  font-family: 'Lobster', cursive;
-  margin-right: 100px;
-  margin-left: 100px;
-  text-align: center;
-  color: darkmagenta;
-  text-shadow: 1px 3px gray;
-}
-h1
-{
-  text-align: center;
-  padding: 40px;
-  margin: 0px;
-}
-
-.menu{
-  background-color: black;
-  padding: 20px;
-
-}
 
 
 </style>
