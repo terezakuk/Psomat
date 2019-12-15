@@ -1,13 +1,13 @@
 <template>
-
+<div class=uvodniStrana>
   <div class="home">
-
- 
     <router-link class="tlacitecko" to="/search">Začít</router-link>
-    <div class="popis">
-
-    </div>
   </div>
+  <div class=logo>
+   <img src="images/logggo.png" alt="logoPsomat">
+  </div>
+</div>
+
 </template>
 
 <script>
@@ -45,7 +45,10 @@ export default {
 	padding: 0;
 	font-family: Raleway, sans-serif;
 } 
-
+.uvodniStrana{
+  position: relative;
+  text-align: center;
+}
 .home {
   background: url('/images/background_image.jpg');
   height: 100vh;
@@ -60,5 +63,16 @@ export default {
 text-transform: uppercase;
 vertical-align: middle; 
 }
+.logo{
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin: 0 auto;
+  width: 200px;
+  transform: translateX(-50%);
+}
+.logo > img {
+  width: 100%;
 
+}
 </style>
