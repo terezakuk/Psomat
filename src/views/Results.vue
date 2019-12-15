@@ -1,6 +1,6 @@
 <template>
   <div>
-    <child-screen>
+    <child-screen route="/search">
       <dogs v-bind:filter="filter" />
 <!--
       <button class="tlacitko"><router-link to="/search">Zpět</router-link></button>
@@ -16,6 +16,9 @@
 <script>
 import Dogs from "@/components/Dogs.vue";
 import ChildScreen from "@/components/Child-screen.vue";
+import { mapState, mapMutations } from "vuex";
+
+
 
 export default {
 
@@ -29,8 +32,12 @@ export default {
 	  filter: {}
   }),
 
+  methods: {
+    ...mapMutations(["savePresents"])
+  },
+
   mounted()
-  {
+  { this.savePresents();
 	  this.filter = 
 	  {
 		vztahKJinymZviratum: [],
