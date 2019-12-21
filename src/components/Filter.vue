@@ -124,6 +124,10 @@
             <input type="checkbox" id="jezevcici" value="Jezevčíci" v-model="kategorie" />
             <label for="jezevcici">Jezevčíci</label>
         </div>
+        <div class="text" >
+            <input type="checkbox" id="ohari" value="Ohaři" v-model="kategorie" />
+            <label for="ohari">Ohaři</label>
+        </div>
           <div class="text" >
             <input type="checkbox"
             id="pincove"

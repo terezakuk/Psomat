@@ -239,5 +239,53 @@
 		"zajimavost": "Jack Russell teriéři jsou známí tím, že s oblibou hrabou v záhonech, ale i mimo ně. Když má málo tréninkových podnětů a cítí se znuděný, má silné destruktivní sklony.",
 		"vhodnyProZacatecniky": false,
 		"doBytu": false
+	},
+	{
+		"id": 16,
+		"nazevPsa": "Anglický setr",
+		"kategorie": "Ohaři",
+		"zemePuvodu": "Velká Británie",
+		"hmotnost": "25-30",
+		"vyska": "61-68",
+		"vek": "10-12",
+		"barva": "dvoubarevný (černý s bílou, játrový s bílou, citronový s bílou), trojbarevný",
+		"povaha": "Vášnivě miluje lov. Má výborně vyvinutý čich, je vytrvalý a spolehlivý. Anglický setr je ze všech setrů nejklidnější, nejsnáze vycvičitelný a miluje děti.",
+		"foto": "https://www.spokojenypes.cz/ImgP.ashx?co=/ImgGalery/Img1/Atlas/170428103757-51111542-xxl-jpg.jpg&fd=a3&pa=1",
+		"vztahKJinymZviratum": "dobrý",
+		"zajimavost": "Setr má hrdé držení těla a pohybuje se elegantně a mrštně, v běhu je na něj nádherný pohled. Často je proto označován za „psího aristokrata“.",
+		"vhodnyProZacatecniky": true,
+		"doBytu": false
+	},
+	{
+		"id": 17,
+		"nazevPsa": "Bretaňský ohař",
+		"kategorie": "Ohaři",
+		"zemePuvodu": "Francie",
+		"hmotnost": "13-15",
+		"vyska": "47-51",
+		"vek": "11-13",
+		"barva": "černobílá, oranžovobílá, hnědobílá či trikolorní",
+		"povaha": "Kromě vynikajícího pomocníka při lovu je to také skvělý společník a stále častěji je chován jako rodinný pes v rodinách s aktivním životním stylem. Díky své inteligenci a schopnosti se rychle učit, může vynikat v různých psích sportech.",
+		"foto": "https://upload.wikimedia.org/wikipedia/commons/a/af/Brittany_Spaniel_standing.jpg",
+		"vztahKJinymZviratum": "specifický",
+		"zajimavost": "Slouží především k lovu pernaté zvěře",
+		"vhodnyProZacatecniky": true,
+		"doBytu": false
+	},
+	{
+		"id": 18,
+		"nazevPsa": "Český fousek",
+		"kategorie": "Ohaři",
+		"zemePuvodu": "Česko",
+		"hmotnost": "22-34",
+		"vyska": "58-66",
+		"vek": "12-13",
+		"barva": "Hnědá s šedými chlupy",
+		"povaha": "Český fousek je oblíbený především u myslivců. Je to velice klidný a poslušný pes. Je také inteligentní, aktivní a houževnatý. Miluje pohyb. Svému páníčkovi umí český fousek projevovat náklonnost, je přítulný. Umí se přizpůsobit a je učenlivý a snadno vycvičitelný. Na škodnou umí být patřičně ostrý a vydrží i náročnější klimatické podmínky.",
+		"foto": "https://zena-in.cz/media/2013/06/27/fo1.jpg",
+		"vztahKJinymZviratum": "specifický",
+		"zajimavost": "První zmínky o psech podobných českému fouskovi nalézáme již v době Karla IV, který je choval jako lovecké psy.",
+		"vhodnyProZacatecniky": true,
+		"doBytu": false
 	}
 ]
